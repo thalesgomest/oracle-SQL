@@ -22,20 +22,20 @@ FROM DUAL
 -   `UPPER(arg)` retorna o argumento em letras maiúsculas
 -   `INITCAP(arg)` retorna a primeira letra maiúscula para cada palavra do argumento
 -   `CONCAT(arg1,arg2,...)` concatena 2 ou mais argumentos
--   `SUBSTR(arg,posicao_inicial,tamanho)` retorna a sub string baseada nos parametros `posicao_incial` e `tamanho` passados
+-   `SUBSTR(arg,posicao_inicial,tamanho_total)` retorna a sub string baseada nos parâmetros posiçãoo incial e tamanho total informados
 -   `LENGTH(arg)` retorna o tamanho do argumento
--   `INSTR(arg,arg_procurado)` retorna a posição inicial do `argumento_procurado`
--   `LPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a direita de acordo com o `tamanho_total` informado e completa a esquerda com o `caractere_preenchimento`. Lembrar do **L** de left.
--   `RPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a esquerda de acordo com o `tamanho_total` informado e completa a direita com o `caractere_preenchimento`. Lembrar do **R** de right.
--   `REPLACE(arg,procurado,substituicao)` procura no argumento o `elemento_procurado` e troca pelo `substituicao`
--   `TRIM(caractere FROM arg)` remove o `caractere` da direita e esquerda do argumento
--   `RTRIM(arg,caractere)` remove `caractere` da direita argumento
--   `LTRIM(arg,caractere)` remove `caractere` da esquerda argumento
+-   `INSTR(arg,arg_procurado)` retorna a posição inicial do argumento procurado
+-   `LPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a direita de acordo com o tamanho total informado e completa a esquerda com o caractere de preenchimento. Lembrar do **L** de left.
+-   `RPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a esquerda de acordo com o tamanho total informado e completa a direita com o caractere de preenchimento. Lembrar do **R** de right.
+-   `REPLACE(arg,procurado,substituicao)` procura no argumento o elemento procurado e troca ele pelo substituicao
+-   `TRIM(caractere FROM arg)` remove o caractere da direita e esquerda do argumento
+-   `RTRIM(arg,caractere)` remove o caractere da direita argumento
+-   `LTRIM(arg,caractere)` remove o caractere da esquerda argumento
 
 ## Funções tipo NUMBER
 
--   `ROUND(arg,digitos_precisao)` retorna o argumento com a quantidades de `digitos_precisao` após a vírgula
--   `TRUNC(arg, digitos_precisao)` trunca o argumento sem fazer o arredondamento com a quantidade de `digitos_precisao` informada
+-   `ROUND(arg,digitos_precisao)` retorna o argumento com a quantidades de digitos de precisao após a vírgula
+-   `TRUNC(arg, digitos_precisao)` trunca o argumento sem fazer o arredondamento e com a quantidade de digitos de precisao informada
 -   `MOD(dividendo,divisor)` retorna o resto da divisão do dividendo pelo divisor
 -   `ABS(arg)` retorna o valor absoluto do argumento
 -   `SQRT(arg)` retorna a raíz quadrada do argumento
