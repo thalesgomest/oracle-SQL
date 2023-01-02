@@ -20,22 +20,22 @@ FROM DUAL
 
 -   `LOWER(arg)` retorna o argumento em letras minúsculas
 -   `UPPER(arg)` retorna o argumento em letras maiúsculas
--   `INITCAP(arg)` retorna a primeira letra maiúscula para cada palavra do `argumento`
+-   `INITCAP(arg)` retorna a primeira letra maiúscula para cada palavra do argumento
 -   `CONCAT(arg1,arg2,...)` concatena 2 ou mais argumentos
--   `SUBSTR(arg,posicao_inicial,tamanho)` retorna s sub string procurada
--   `LENGTH(arg)` retorna o tamanho do meu argumento
--   `INSTR(arg,arg_procurado)` retorna a posição inicial do argumento procurado
--   `LPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a direita no tamanho total informado e completa a esquerda com o caractere de preenchimento. Lembrar do **L** de left.
--   `RPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a esquerda no tamanho total informado e completa a direita com o caractere de preenchimento. Lembrar do **R** de right.
--   `REPLACE(arg,procurado,substituicao)` procura no argumento o elemento procutado e troca pelo substituicao
--   `TRIM(caractere FROM arg)` remove caractere da direita e esquerda do argumento
--   `RTRIM(arg,caractere)` remove caracter da direita argumento
--   `LTRIM(arg,caractere)` remove caracter da esquerda argumento
+-   `SUBSTR(arg,posicao_inicial,tamanho)` retorna a sub string baseada nos parametros `posicao_incial` e `tamanho` passados
+-   `LENGTH(arg)` retorna o tamanho do argumento
+-   `INSTR(arg,arg_procurado)` retorna a posição inicial do `argumento_procurado`
+-   `LPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a direita de acordo com o `tamanho_total` informado e completa a esquerda com o `caractere_preenchimento`. Lembrar do **L** de left.
+-   `RPAD(arg,tamanho_total,caractere_preechimento)` alinha o argumento a esquerda de acordo com o `tamanho_total` informado e completa a direita com o `caractere_preenchimento`. Lembrar do **R** de right.
+-   `REPLACE(arg,procurado,substituicao)` procura no argumento o `elemento_procurado` e troca pelo `substituicao`
+-   `TRIM(caractere FROM arg)` remove o `caractere` da direita e esquerda do argumento
+-   `RTRIM(arg,caractere)` remove `caractere` da direita argumento
+-   `LTRIM(arg,caractere)` remove `caractere` da esquerda argumento
 
 ## Funções tipo NUMBER
 
--   `ROUND(arg,digitos_precisao)` retorna o argumento com a quantidades de digitos de precisão
--   `TRUNC(arg, digitos_precisao)` trunca o argumento sem fazer o arredondamento
+-   `ROUND(arg,digitos_precisao)` retorna o argumento com a quantidades de `digitos_precisao` após a vírgula
+-   `TRUNC(arg, digitos_precisao)` trunca o argumento sem fazer o arredondamento com a quantidade de `digitos_precisao` informada
 -   `MOD(dividendo,divisor)` retorna o resto da divisão do dividendo pelo divisor
 -   `ABS(arg)` retorna o valor absoluto do argumento
 -   `SQRT(arg)` retorna a raíz quadrada do argumento
@@ -43,8 +43,6 @@ FROM DUAL
 ## Funções tipo DATE
 
 Definido pelo DBA através do parâmetro `NLS_DATE_FORMAT`. No Brasil normalmente o formato default de exibição de das é definido para `DD/MM/YY` ou `DD/MM/RR`
-
--   `SYSDATE` retorna a data atual
 
 ### Cálculos com datas
 
@@ -55,6 +53,9 @@ Definido pelo DBA através do parâmetro `NLS_DATE_FORMAT`. No Brasil normalment
 |   Data - Data    | Número de dias | Subtrai uma data a partir de outra        |
 | Data + Número/24 |      Data      | Adiciona um número de horas para uma data |
 
+### Outras função tipo DATE
+
+-   `SYSDATE` retorna a data atual
 -   `MONTHS_BETWEEN(arg1, arg2)` Número de meses entre duas datas
 -   `ADD_MONTHS(arg1,arg2)` retorna o resto da divisão do dividendo pelo divisor
 -   `NEXT_DAY(arg1, arg2)` próximo dia a uma data especificada
