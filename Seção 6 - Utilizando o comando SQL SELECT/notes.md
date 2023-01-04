@@ -18,7 +18,7 @@ DESC[RIBE] tabela
 
 ## Alias
 
-Utilize o comando DESCRIBE para exibir a estrutura da tabela
+Na linguagem SQL podemos utilizar um alias (pseudônimo ou nome de correlação) para dar um nome a uma tabela ou a uma coluna um nome temporário.
 
 ```SQL
 SELECT first_name AS nome, last_name AS sobrenome, salary AS salário
