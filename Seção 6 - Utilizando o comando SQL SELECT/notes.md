@@ -32,7 +32,7 @@ SELECT first_name nome, last_name  sobrenome, salary salário
 FROM employees;
 ```
 
-Quanto meu cabeçado tiver mais de uma palavra ou letras maiúsculas e minúsculas, eu preciso escrever meu alias com aspas duplas
+Quando meu cabeçalho (alias) possuir mais de uma palavra ou letras maiúsculas e minúsculas, eu preciso escrever meu alias com aspas duplas
 
 ```SQL
 SELECT first_name "Nome", last_name "Sobrenome", salary "Salário ($)", commission_pct "Percentual de comissão"
@@ -41,7 +41,7 @@ FROM   employees;
 
 ## Operador de concatenação (`||`)
 
-É representado pois dois pipes. Liga colunas ou strings de caracteres com outras colunas ou strings de caracteres
+É representado por dois pipes. Sua função é ligar colunas ou strings de caracteres com outras colunas ou strings de caracteres
 
 ```SQL
 SELECT first_name || ' ' || last_name || ', data de admissão: ' || hire_date "Funcionário"
@@ -61,7 +61,7 @@ O operador alternativo para aspas nesse caso é o `[]`, mas poderia ser qualquer
 
 ## DISTINCT
 
-Por default as consultas exibem todas as linhas retornadas, incluindo as linhas duplicadas. A clausula `DISTINCT` permite exibir uma vez o valor de cada consulta.
+Por default as consultas exibem todas as linhas retornadas, incluindo as linhas duplicadas. A cláusula `DISTINCT` é utilizada para retornar apenas uma ocorrência de campos que contenham dados repetidos. Esse recurso é útil para eliminar a duplicidade de informações e, assim, recuperar apenas o que será utilizado pela aplicação.
 
 ```SQL
 SELECT DISTINCT department_id
