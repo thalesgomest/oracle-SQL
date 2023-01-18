@@ -12,3 +12,4 @@ Este repositório foi criado afim de documentar os aprendizados do curso [**Orac
 -   [x] Seção 6 - SQL Fundamentos - Consultando dados utilizando o comando SQL SELECT
 -   [x] Seção 7 - SQL Fundamentos - Restringindo e Ordenando Dados
 -   [x] Seção 8 - SQL Fundamentos - Utilizando Funções Single Row
+-   [x] Seção 9 - SQL Fundamentos - Utilizando Funções de Conversão e Expressões Condicionais
