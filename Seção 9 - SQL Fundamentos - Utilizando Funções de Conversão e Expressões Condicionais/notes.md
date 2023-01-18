@@ -131,6 +131,6 @@ END alias;
 
 ```SQL
 DECODE (col|expr, arg1, resulta1
-				[,arg2, result2,...,]
-				[,default])
+		[,arg2, result2,...,]
+		[,default])
 ```
