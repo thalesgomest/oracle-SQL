@@ -8,14 +8,16 @@
 
 ## Tipos de Conversão
 
--   Conversão Implícita
+1. CONVERSÃO IMPLÍCITA	
+
     | DE | PARA |
     |:----------------:|:----------------:|
     | VARCHAR2 ou CHAR | NUMBER |
     | VARCHAR2 ou CHAR | DATE |
     | NUMBER | VARCHAR2 ou CHAR |
     | DATE | VARCHAR2 ou CHAR |
--   Conversão Explícita
+    
+2. CONVERSÃO EXPLÍCITA	
 
     ![image](https://user-images.githubusercontent.com/97575616/213059331-ec09ad29-6e08-4d59-9a28-5baae352deb3.png)
 
@@ -106,10 +108,10 @@ WHERE  hire_date = TO_DATE('17/06/2003','DD/MM/YYYY');
 
 ## Funções Genéricas
 
--   `NVL(expr1, expr2)` - Se o argumento da expr1 for nulo, ele usa o argumento da expr2. Se não usa o próprio argumento da expr1
--   `NVL2(expr1, expr2, expr3)` - O primeiro argumento for nulo, ele usa o argumento da expr2. Se não for nulo, ele usa o argumento da expr3.
--   `NULLIF(expr1, expr2)` - Se os dois argumentos foram iguais ela retorna `NULL` se não ela retorna o primeiro
--   `COALESCE(expr1, expr2,...,exprn)` - Recebe uma lista de argumentos e retorna o primeiro argumento diferente de nulo.
+-   `NVL(expr1, expr2)` <br>Se o argumento da expr1 for nulo, ele usa o argumento da expr2. Se não usa o próprio argumento da expr1
+-   `NVL2(expr1, expr2, expr3)` <br>O primeiro argumento for nulo, ele usa o argumento da expr2. Se não for nulo, ele usa o argumento da expr3.
+-   `NULLIF(expr1, expr2)` <br>Se os dois argumentos foram iguais ela retorna `NULL` se não ela retorna o primeiro
+-   `COALESCE(expr1, expr2,...,exprn)` <br>Recebe uma lista de argumentos e retorna o primeiro argumento diferente de nulo.
 
 ## Expressões Condicionais
 
