@@ -21,7 +21,7 @@
 
     ![image](https://user-images.githubusercontent.com/97575616/213059331-ec09ad29-6e08-4d59-9a28-5baae352deb3.png)
 
-## Função TO_CHAR com datas
+### Função TO_CHAR com datas
 
 ```SQL
 TO_CHAR(date, 'formato')
@@ -58,7 +58,7 @@ SELECT last_name,TO_CHAR(hire_date, 'DD/MM/YYYY  HH24:MI:SS') DT_ADMISSÂO
 FROM employees;
 ```
 
-## Função TO_CHAR com números
+### Função TO_CHAR com números
 
 | FORMATO | RESULTADO                                                                                           |
 | ------- | --------------------------------------------------------------------------------------------------- |
@@ -78,13 +78,13 @@ SELECT first_name, last_name, TO_CHAR(salary, 'L99G999G999D99') SALARIO
 FROM employees;
 ```
 
-## Função TO_NUMBER
+### Função TO_NUMBER
 
 ```SQL
 TO_NUMBER(char[,'Formato'])
 ```
 
-## Função TO_DATE
+### Função TO_DATE
 
 ```SQL
 TO_DATE(char[,'Formato'])
@@ -129,10 +129,34 @@ CASE expr WHEN expr1 THEN
 END alias;
 ```
 
+**Exemplo**
+```SQL
+SELECT last_name, job_id, salary,
+                          CASE job_id
+                             WHEN 'IT_PROG'   
+                               THEN 1.10*salary
+                             WHEN 'ST_CLERK' 
+                               THEN 1.15*salary
+                             WHEN 'SA_REP' 
+                               THEN 1.20*salary
+                             ELSE salary 
+                           END "NOVO SALARIO"
+FROM employees;
+```
+
 ### Função DECODE
 
 ```SQL
 DECODE (col|expr, arg1, resulta1
 		[,arg2, result2,...,]
 		[,default])
+```
+**Exemplo**
+```SQL
+SELECT last_name, job_id, salary,
+DECODE(job_id, 'IT_PROG' , 1.10*salary,
+               'ST_CLERK', 1.15*salary,
+               'SA_REP'  , 1.20*salary
+                         , salary) "NOVO SALARIO"
+FROM employees;
 ```
