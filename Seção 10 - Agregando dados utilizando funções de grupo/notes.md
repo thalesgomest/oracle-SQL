@@ -80,9 +80,9 @@ HAVING MAX(salary)>10000;
 
 ## Sequência Lógica
 
-1. `WHERE` <br> Seleciona as linahs a serem recuperadas
-2. `GROUP BY` <br> Agrupa as linhas a serem recuperadas. Forma os grupos
-3. `HAVING` <br> Seleciona os grupos a serem recuperados
+1. `WHERE` Seleciona as linahs a serem recuperadas
+2. `GROUP BY` Agrupa as linhas a serem recuperadas. Forma os grupos
+3. `HAVING` Seleciona os grupos a serem recuperados
 4. Exibir colunas ou expressões do `SELECT` ordenando pelo critério da cláusula `ORDER BY`
 
 Abaixo temos um exemplo que utiliza todas as cláusulas da nossa sequência lógica.
