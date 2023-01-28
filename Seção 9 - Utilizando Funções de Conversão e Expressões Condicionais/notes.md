@@ -1,4 +1,4 @@
-# SQL Fundamentos - Utilizando Funções de Conversão e Expressões Condicionais
+# SQL Fundamentos: Utilizando Funções de Conversão e Expressões Condicionais
 
 ## Objetivos
 
@@ -8,16 +8,16 @@
 
 ## Tipos de Conversão
 
-1. CONVERSÃO IMPLÍCITA	
+1. CONVERSÃO IMPLÍCITA
 
-    | DE | PARA |
-    |:----------------:|:----------------:|
-    | VARCHAR2 ou CHAR | NUMBER |
-    | VARCHAR2 ou CHAR | DATE |
-    | NUMBER | VARCHAR2 ou CHAR |
-    | DATE | VARCHAR2 ou CHAR |
-    
-2. CONVERSÃO EXPLÍCITA	
+    |        DE        |       PARA       |
+    | :--------------: | :--------------: |
+    | VARCHAR2 ou CHAR |      NUMBER      |
+    | VARCHAR2 ou CHAR |       DATE       |
+    |      NUMBER      | VARCHAR2 ou CHAR |
+    |       DATE       | VARCHAR2 ou CHAR |
+
+2. CONVERSÃO EXPLÍCITA
 
     ![image](https://user-images.githubusercontent.com/97575616/213059331-ec09ad29-6e08-4d59-9a28-5baae352deb3.png)
 
@@ -130,16 +130,17 @@ END alias;
 ```
 
 **Exemplo**
+
 ```SQL
 SELECT last_name, job_id, salary,
                           CASE job_id
-                             WHEN 'IT_PROG'   
+                             WHEN 'IT_PROG'
                                THEN 1.10*salary
-                             WHEN 'ST_CLERK' 
+                             WHEN 'ST_CLERK'
                                THEN 1.15*salary
-                             WHEN 'SA_REP' 
+                             WHEN 'SA_REP'
                                THEN 1.20*salary
-                             ELSE salary 
+                             ELSE salary
                            END "NOVO SALARIO"
 FROM employees;
 ```
@@ -151,7 +152,9 @@ DECODE (col|expr, arg1, resulta1
 		[,arg2, result2,...,]
 		[,default])
 ```
+
 **Exemplo**
+
 ```SQL
 SELECT last_name, job_id, salary,
 DECODE(job_id, 'IT_PROG' , 1.10*salary,

@@ -1,4 +1,4 @@
-# SQL Fundamentos - Agregando dados utilizando funções de grupo
+# SQL Fundamentos: Agregando dados utilizando funções de grupo
 
 ## Objetivos
 
