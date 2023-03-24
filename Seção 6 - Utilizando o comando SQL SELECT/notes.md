@@ -39,7 +39,7 @@ SELECT first_name "Nome", last_name "Sobrenome", salary "Salário ($)", commissi
 FROM   employees;
 ```
 
-## Operador de concatenação (`||`)
+## Operador de concatenação ( || )
 
 É representado por dois pipes. Sua função é ligar colunas ou strings de caracteres com outras colunas ou strings de caracteres
 
@@ -48,7 +48,7 @@ SELECT first_name || ' ' || last_name || ', data de admissão: ' || hire_date "F
 FROM   employees;
 ```
 
-## Operador alternativo de aspas (`q'`)
+## Operador alternativo de aspas ( q' )
 
 Representado pela letra q (_quotes_), seguido de aspas + operador alternativo de concatenação.
 
